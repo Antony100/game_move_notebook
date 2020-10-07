@@ -1,0 +1,1 @@
+move1 = Moves(character=baraka, move_name='jab', move_input='1', move_type='High', damage='9',block_damage='1', f_block_damage='0.1', startup='7', Active='6', Recovery='16', cancel_adv='14', hit_adv='10', block_adv='-1', f_block_adv='-10', info='Krushing Blow', equip='', classification='Basic Attack')

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<link href=" {% static '/css/frames.css' %} " rel="stylesheet">
+</head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baraka</title>
+</head>
+<body>
+    {% block content %}
+    {% for move in moves %}
+        <h1> {{moves.character_id}} </h1>
+    {% endfor %}
+    <table class ="blueTable">
+        <tr>
+            <th>Move</th>
+            <th>Input</th>
+            <th>Type</th>
+            <th>damage</th>
+            <th>block dmg</th>
+            <th>flawless block dmg</th>
+            <th>Startup</th>
+            <th>Active</th>
+            <th>Recovery</th>
+            <th>cancel adv</th>
+            <th>hit adv</th>
+            <th>block adv</th>
+            <th>flawless block adv</th>
+            <th>info</th>
+            <th>equip</th>
+            <th>classification</th>
+            <th>character id</th>
+        </tr>
+        {% for move in moves %}
+        <tr>
+            <td>{{ move.move_name }}</td>
+            <td>{{ move.move_input }}</td>
+            <td>{{ move.move_type }}</td>
+            <td>{{ move.damage }}</td>
+            <td>{{ move.block_damage }}</td>
+            <td>{{ move.f_block_damage }}</td>
+            <td>{{ move.startup }}</td>
+            <td>{{ move.Active }}</td>
+            <td>{{ move.Recovery }}</td>
+            <td>{{ move.cancel_adv }}</td>
+            <td>{{ move.hit_adv }}</td>
+            <td>{{ move.block_adv }}</td>
+            <td>{{ move.f_block_adv }}</td>
+            <td>{{ move.info }}</td>
+            <td>{{ move.equip }}</td>
+            <td>{{ move.classification }}</td>
+            <td>{{ move.character_id }}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+
+    {% endblock %}
+</body>
+</html>

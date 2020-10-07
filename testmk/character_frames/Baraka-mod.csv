@@ -1,0 +1,67 @@
+Move,Input,Type,Dmg,Block dmg,F/Block dmg,Startup,Active,Recovery,Cancel adv.,Hit adv.,Block adv.,F/Block adv.,Info,Equip,Classification
+Spiked Cross,1,High,2,"0,3","0,0003",7,2,18,14,16,-3,-3,,,Basic Attack
+Low Stab,D+1,Mid,2,"0,3","0,0003",7,2,13,11,10,-3,-3,,,Basic Attack
+Straight Shank,D+F+1,Mid,2,"0,3","0,0003",8,2,13,12,17,-3,-3,,Requires: Baraka Barrage,Basic Attack
+Warrior Strike,2,High,3,"0,45","0,0005",10,2,24,16,6,-9,-9,,,Basic Attack
+Lunging Blades,B+2,Overhead,7,"1,05","0,0011",28,3,29,N/A,38,-5,-10,,,Basic Attack
+Blade Swipe,F+2,High,5,"0,75","0,0008",8,2,34,13,11,-9,-9,,,Basic Attack
+Rising Blades,D+2,High,14,"2,1","0,0021",10,3,41,N/A,30,-7,-17,KRUSHING BLOW: Triggers if this ATTACK KOUNTERS or PUNISHES a HIGH ATTACK.,,Basic Attack
+Hinge Kick,3,High,5,"0,75","0,0008",10,2,32,17,10,-7,-7,,,Basic Attack
+Foot Stomp,B+3,Low,3,"0,45","0,0005",14,2,22,18,14,-7,-7,,,Basic Attack
+Low Poke,D+3,Low,1,"0,15","0,0002",7,3,13,13,14,-4,-4,,,Basic Attack
+Low Shank,D+F+3,Low,1,"0,15","0,0002",8,2,14,15,11,-4,-4,,Requires: Baraka Barrage,Basic Attack
+Big Leg,4,High,7,"1,05","0,0011",10,2,21,11,15,4,4,,,Basic Attack
+Leg Chop,B+4,Low,7,"1,05","0,0011",14,2,22,N/A,27,-2,-7,,,Basic Attack
+Knee Lunge,F+4,Mid,5,"0,75","0,0008",12,5,24,18,3,-2,-2,,,Basic Attack
+Side Kick,D+4,Low,3,"0,45","0,0005",15,2,14,17,25,1,1,,,Basic Attack
+Hangry Jab,1,Mid,5,"0,75","0,0008",8,6,31,N/A,-1,-13,-13,,,Jumping Attack
+Sinister Shank,D+1,Mid,5,"0,75","0,0008",8,6,16,N/A,7,-5,-5,,Requires: Baraka Barrage,Jumping Attack
+Sinister Slice,2,Mid,7,"1,05","0,0011",7,2,31,N/A,9,-3,-8,,,Jumping Attack
+Dropkick,3 or 4,Mid,9,"1,35","0,0014",8,7,31,N/A,27,-8,-13,,,Jumping Attack
+Bladed Doom,"U,1 or U,2",Overhead,9,"1,35","0,0014",9,5,29,N/A,38,-12,-17,,,Hop Attack
+Karbrac Kick,"U,3 or U,4",Overhead,9,"1,35","0,0014",10,4,30,N/A,38,-12,-17,,,Hop Attack
+Fatal Strike,U+2,Mid,5,"0,75","0,0008",11,3,26,N/A,50,-12,-12,Can only be performed after being KNOCKED DOWN. Costs 1 bar of Defensive Meter and Offensive Meter.,,Getup Attack
+Karbrac Stab,U+3,Mid (Inv.),9,"1,35","0,0014",11,3,22,N/A,14,-3,-8,Can only be performed after being KNOCKED DOWN. Costs 1 bar of Defensive Meter and Offensive Meter.,,Getup Attack
+Fatal Strike,U+2,Mid,5,"0,75","0,0008",11,3,26,N/A,50,-12,-12,Can only be performed after connecting a FLAWLESS BLOCK. Costs 1 bar of Defensive Meter and Offensive Meter.,,Flawless Block Attack
+Karbrac Stab,U+3,Mid (Inv.),9,"1,35","0,0014",11,3,22,N/A,14,-3,-8,Can only be performed after connecting a FLAWLESS BLOCK. Costs 1 bar of Defensive Meter and Offensive Meter.,,Flawless Block Attack
+Toward Throw,THROW+F or F+1+3,Throw,14,N/A,0,10,2,34,N/A,18,N/A,N/A,KRUSHING BLOW: Triggers if opponent failed THROW ESCAPE during the previous THROW.,,Throw
+Back Throw,THROW or 1+3,Throw,14,N/A,0,10,2,34,N/A,18,N/A,N/A,KRUSHING BLOW: Triggers if opponent failed THROW ESCAPE during the previous THROW.,,Throw
+Forward Roll Escape,F+STANCE,N/A (Inv.),N/A,N/A,0,2,N/A,5,30,N/A,N/A,N/A,Uses 1 bar of Defensive Meter to perform Forward Roll Escape.,,Roll Escape
+Away Roll Escape,B+STANCE,N/A (Inv.),N/A,N/A,0,2,N/A,5,30,N/A,N/A,N/A,Uses 1 bar of Defensive Meter to perform Away Roll Escape.,,Roll Escape
+(Air) Breakaway,D+BLOCK,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Uses 2 bars of Defensive Meter to perform (Air) Breakaway.,,Air Escape
+Easy Kill,"1,1",Mid,3,"0,45","0,0005",9,2,21,15,6,-2,-2,,,Kombo Attack
+Mangled,"1,1,2",Mid,5,"0,75","0,0008",17,2,34,19,2,1,1,,,Kombo Attack
+Bloodthirsty,"1,2",Mid,3,"0,45","0,0005",15,3,26,18,10,-7,-7,,,Kombo Attack
+Outworld Bash,"1,2,2",Overhead,7,"1,05","0,0011",23,2,29,N/A,20,-4,-4,KRUSHING BLOW: Triggers if this KOMBO ATTACK is a PUNISH.,,Kombo Attack
+Splintered,"2,1+3",Mid,7,"1,05","0,0011",18,2,24,N/A,49,1,1,,,Kombo Attack
+Painful Swipes,"F+2,1",Mid,3,"0,45","0,0005",8,3,27,15,5,-8,-8,,,Kombo Attack
+Bloody Mess,"F+2,1,2",Mid,7,"1,05","0,0011",21,1,25,N/A,46,1,-4,,,Kombo Attack
+Tarkatan Rush,"B+3,1",Mid,3,"0,45","0,0005",14,2,29,17,8,-4,-4,,,Kombo Attack
+Cutting Loose,"B+3,1,2",Overhead,7,"1,05","0,0011",20,2,31,N/A,37,-6,-6,,,Kombo Attack
+Doom Kicks,"F+4,4",Mid,7,"1,05","0,0011",6,3,33,N/A,18,-7,-7,KRUSHING BLOW: Triggers if this KOMBO ATTACK is a KOUNTER or PUNISH.,,Kombo Attack
+Blade Spark,DB1,High (Projectile),7,"1,88","0,0019",16,N/A,N/A,26,4,-18,-18,,,Special Move
+• Amplify,AMP,Mid (Projectile),7,"1,88","0,0019",14,N/A,N/A,N/A,8,-15,-15,,,Special Move
+Blade Charge,BF2,Mid,12,"1,37","0,0014",16,4,26,N/A,18,-13,-13,KRUSHING BLOW: Triggers if opponent BLOCKS LATE.,Requires: Blade Charge (*),Special Move
+• Throw Away,Hold B,N/A,9,N/A,"0,09",54,N/A,67,N/A,18,N/A,N/A,,Requires: Blade Charge (*),Special Move
+Blood Lunge,BF2,Throw,12,N/A,"0,0014",17,2,32,N/A,18,N/A,N/A,KRUSHING BLOW: Triggers if opponent is hit during GETUP ROLL.,Requires: Blood Lunge (**),Special Move
+Chop Chop,DB3,Mid,"20,81","10,83","0,0025",13,78,31,N/A,9,-17,-17,,,Special Move
+• Extend,3 Rapidly,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,,,Special Move
+• Amplify,AMP,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,,,Special Move
+• Further Amplify,AMP,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,,,Special Move
+Spine Burst,DB3,High,9,"2,13","0,0021",9,16,18,N/A,34,-7,-7,,Requires: Spine Burst (*),Special Move
+Leg Kabob,BF4,Low,"7,48","1,88","0,0019",18,2,31,27,19,-7,-7,,Requires: Leg Kabob (*),Special Move
+• Amplify,AMP,N/A,8,N/A,"0,08",1,N/A,121,N/A,18,N/A,N/A,KRUSHING BLOW: Triggers if opponent is STAND BLOCKING.,Requires: Leg Kabob (*),Special Move
+• Throw Away,AMP Hold B,N/A,3,N/A,"0,03",36,N/A,86,N/A,18,N/A,N/A,,Requires: Leg Kabob (*),Special Move
+Gutted,BF4,Mid,12,"1,37","0,0014",14,2,27,86,43,-18,-18,KRUSHING BLOW: Triggers in a KOMBO of 9 or more.,Requires: Gutted (**),Special Move
+• Amplify,AMP,N/A,"5,42",N/A,"0,0542",1,N/A,52,N/A,66,N/A,N/A,,Requires: Gutted (**),Special Move
+Baraka-Serker,BF3,Mid,"12,84","5,75","0,0018",10,54,39,46,29,-14,-14,,Requires: Baraka-Serker (*),Special Move
+• Amplify,AMP or AMP Hold B,Mid,12,"1,37","0,0014",16,4,26,N/A,18,-13,-13,KRUSHING BLOW: Triggers if opponent BLOCKS LATE. Requires Blade Charge equipped.,Requires: Baraka-Serker (*),Special Move
+War Banner,DB4,N/A (Buff - Damage),N/A,N/A,0,1,N/A,60,N/A,N/A,N/A,N/A,,,Special Move
+War Banner Bash,DB4,Mid (Buff - Damage),7,"1,88","0,0019",27,2,54,N/A,15,-19,-19,,Requires: War Banner Bash (*),Special Move
+• Staked,DB4,Low,21,"2,13","0,0021",28,2,31,N/A,18,6,6,,Requires: Staked (*),Special Move
+• War Banner Charge,BF3,Mid (Armor - Multiple),12,"2,5","0,0025",46,75,51,28,14,-13,-13,,Requires: War Banner Charge (*),Special Move
+• Cancel,DD,N/A,N/A,N/A,0,1,N/A,19,N/A,N/A,N/A,N/A,,Requires: War Banner Charge (*),Special Move
+Fatal Blow,,,,,,,,,,,,,,,Special Move
+Skewered,STANCE+BLOCK,"Mid (Armor - 1 Hit, Buff - Damage)",31,"1,5","0,0015",13,4,42,N/A,18,-24,-29,,,Special Move
+Food For Thought (Close) ,BDB2,,,,,,,,,,,,,,Fatality
+"Rock, Paper, Baraka (Close)",BFB3,,,,,,,,,,,,,,Fatality

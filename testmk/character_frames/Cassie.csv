@@ -1,0 +1,86 @@
+Move,Input,Type,Dmg,Block dmg,F/Block dmg,Startup,Active,Recovery,Cancel adv.,Hit adv.,Block adv.,F/Block adv.,Info,Equip,Classification
+Justice Jab,1,High,2,"0,3","0,0003",7,3,13,10,7,1,1,,,Basic Attack
+Low Shot,B+1,Low,3,"0,45","0,0005",18,2,31,24,5,-11,-11,,,Basic Attack
+Straight Punch,D+1,Mid,2,"0,3","0,0003",8,2,14,16,10,-4,-4,,,Basic Attack
+Quick Hook,2,High,3,"0,45","0,0005",10,2,20,13,17,-5,-5,,,Basic Attack
+Throwin' Bows,B+2,Mid,3,"0,45","0,0005",11,3,28,16,3,-4,-4,,,Basic Attack
+Backhand,F+2,High,3,"0,45","0,0005",10,2,25,12,16,0,0,,,Basic Attack
+Bloody Knuckles,D+2,High,14,"2,1","0,0021",10,4,41,N/A,29,-8,-18,KRUSHING BLOW: Triggers if this ATTACK KOUNTERS or PUNISHES a HIGH ATTACK.,,Basic Attack
+High Kick,3,High,5,"0,75","0,0008",8,2,22,11,14,3,3,,,Basic Attack
+Glow Burst,B+3,High,5,"0,75","0,0008",10,9,23,11,16,-6,-6,,,Basic Attack
+Spin Kick,F+3,Low,3,"0,45","0,0005",19,3,16,24,9,-2,-2,,,Basic Attack
+Side Kick,D+3,Low,1,"0,15","0,0002",9,3,14,15,10,-5,-5,,,Basic Attack
+Roundhouse,4,High,7,"1,05","0,0011",12,3,21,17,8,3,3,,,Basic Attack
+Cunning Sweep,B+4,Low,7,"1,05","0,0011",12,4,23,N/A,24,-5,-10,,,Basic Attack
+Flick Kick,F+4,Mid,3,"0,45","0,0005",9,3,19,12,17,0,-5,,,Basic Attack
+Steel Toe,D+4,Low,3,"0,45","0,0005",10,3,21,18,16,-7,-7,,,Basic Attack
+Cage Jab,1,Mid,5,"0,75","0,0008",7,4,31,40,-1,-13,-13,,,Jumping Attack
+Double Axe Handle,2,Mid,7,"1,05","0,0011",11,3,31,43,9,-3,-8,,,Jumping Attack
+Army Boot,3 or 4,Mid,9,"1,35","0,0014",9,7,31,45,27,-8,-13,,,Jumping Attack
+Dive Bomb,"U,1 or U,2",Overhead,9,"1,35","0,0014",11,3,32,N/A,37,-13,-18,,,Hop Attack
+Kombat Kick,"U,3 or U,4",Overhead,9,"1,35","0,0014",11,6,30,N/A,36,-14,-19,,,Hop Attack
+Flip Kick,U+2,Mid,7,"0,75","0,0008",13,6,31,N/A,49,-25,-25,Can only be performed after being KNOCKED DOWN. Costs 1 bar of Defensive Meter and Offensive Meter.,,Getup Attack
+Nut Punch,U+3,Mid (Inv.),9,"1,35","0,0014",10,3,28,N/A,14,-4,-14,Can only be performed after being KNOCKED DOWN. Costs 1 bar of Defensive Meter and Offensive Meter.,,Getup Attack
+Flip Kick,U+2,Mid,7,"0,75","0,0008",13,6,31,N/A,49,-25,-25,Can only be performed after connecting a FLAWLESS BLOCK. Costs 1 bar of Defensive Meter and Offensive Meter.,,Flawless Block Attack
+Nut Punch,U+3,Mid (Inv.),9,"1,35","0,0014",10,3,28,N/A,14,-4,-14,Can only be performed after connecting a FLAWLESS BLOCK. Costs 1 bar of Defensive Meter and Offensive Meter.,,Flawless Block Attack
+Toward Throw,THROW+F or F+1+3,Throw,14,N/A,0,10,2,34,N/A,18,N/A,N/A,,,Throw
+Back Throw,THROW or 1+3,Throw,14,N/A,0,10,2,34,N/A,13,N/A,N/A,,,Throw
+Forward Roll Escape,F+STANCE,N/A (Inv.),N/A,N/A,0,2,N/A,5,30,N/A,N/A,N/A,Uses 1 bar of Defensive Meter to perform Forward Roll Escape.,,Roll Escape
+Away Roll Escape,B+STANCE,N/A (Inv.),N/A,N/A,0,2,N/A,5,30,N/A,N/A,N/A,Uses 1 bar of Defensive Meter to perform Away Roll Escape.,,Roll Escape
+(Air) Breakaway,D+BLOCK,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Uses 2 bars of Defensive Meter to perform (Air) Breakaway.,,Air Escape
+Double Down,"1,1",Mid,2,"0,3","0,0003",9,3,21,12,6,-2,-2,,,Kombo Attack
+Whip It Good,"1,1,1",Mid,7,"1,05","0,0011",18,3,32,22,-3,-8,-8,,,Kombo Attack
+Belly Buster,"1,2",Mid,3,"0,45","0,0005",11,3,24,15,12,0,0,,,Kombo Attack
+Active Duty,"1,2,4",Mid,7,"1,05","0,0011",18,2,28,N/A,45,-3,-3,,,Kombo Attack
+Hot Take,"B+1,3",Mid,7,"1,05","0,0011",15,4,34,N/A,50,-11,-11,KRUSHING BLOW: Triggers if opponent is STAND BLOCKING.,,Kombo Attack
+Hooks And Hammers,"2,1",Mid,3,"0,45","0,0005",13,3,25,19,10,-1,-1,,,Kombo Attack
+Assaulted,"2,1,1,2",High,"9,25","1,5","0,0008",13,N/A,N/A,N/A,1,-8,-8,,,Kombo Attack
+The Rushdown,"2,1,D+2",Overhead,7,"1,05","0,0011",17,3,29,N/A,19,-5,-5,,,Kombo Attack
+No Breaks,"B+2,4",Mid,3,"0,45","0,0005",16,5,24,24,10,-7,-7,,,Kombo Attack
+Keepin' It Classy,"B+2,4,3",High,7,"1,05","0,0011",16,9,25,N/A,12,-3,-3,KRUSHING BLOW: Triggers if only the FINAL hit of the KOMBO connects.,,Kombo Attack
+Shocker,"F+2,1+3",Mid,7,"1,05","0,0011",23,5,31,N/A,39,1,1,KRUSHING BLOW: Triggers if this KOMBO ATTACK is a KOUNTER or PUNISH.,,Kombo Attack
+Marching Orders,"3,4",Mid,7,"1,05","0,0011",22,2,20,24,40,0,0,,,Kombo Attack
+Millitary Dance,"F+3,4",Mid,3,"0,45","0,0005",14,3,17,20,28,-3,-3,,,Kombo Attack
+Heavy Hitter,"F+3,4,3",Mid,7,"1,05","0,0011",25,3,31,N/A,21,3,-7,,,Kombo Attack
+Poppin' Bubbles,"F+4,1",Overhead,3,"0,45","0,0005",15,3,29,21,9,-5,-5,,,Kombo Attack
+One In The Chamber,"F+4,1,2",High,5,"0,75","0,0008",22,N/A,N/A,27,27,-6,-6,,,Kombo Attack
+Dual Wielding,BF1,High (Projectile),"7,4",3,"0,0016",23,N/A,N/A,22,6,-11,-11,KRUSHING BLOW: Triggers when fully CHARGED and held for maximum duration.,,Special Move
+• Charge,Hold 1,High (Delay),16,"5,2","0,0017",2,N/A,N/A,N/A,11,-3,-3,,,Special Move
+• Cancel,D,High (Cancel),16,"5,2","0,0017",2,N/A,N/A,N/A,11,-3,-3,,,Special Move
+• Amplify,AMP,High (Projectile),16,"5,2","0,0017",2,N/A,N/A,N/A,11,-3,-3,,,Special Move
+Ball Buster,BD3,Mid,6,"1,75","0,0018",10,3,36,28,2,-22,-22,,,Special Move
+• Amplify,AMP,Mid,6,"1,75","0,0018",13,1,37,N/A,51,-11,-11,KRUSHING BLOW: Triggers on THIRD AMPLIFIED Ball Buster in a match.,,Special Move
+Up Glow Kick,BF4,High,6,"1,75","0,0018",11,12,37,26,22,-22,-22,,,Special Move
+• Amplify,AMP,Overhead,8,2,"0,0018",8,9,28,N/A,14,0,0,,,Special Move
+Flying Glow Kick,BF3,High,6,"1,75","0,0018",18,13,41,N/A,4,-8,-18,KRUSHING BLOW: Triggers if this ATTACK is a KOUNTER or a PUNISH.,Requires: Flying Glow Kick (*),Special Move
+(Air) Bullet Barrage,BF1,High (Projectile),"7,4",3,"0,0016",6,N/A,N/A,54,-20,-42,-42,,Requires: (Air) Bullet Barrage (*),Special Move
+• Amplify,AMP,Mid (Projectile),6,"1,75","0,0018",5,N/A,N/A,N/A,6,-35,-35,,Requires: (Air) Bullet Barrage (*),Special Move
+Shoulder Charge,DB3,Mid,7,"1,88","0,0019",12,6,27,25,1,-16,-16,,Requires: Shoulder Charge (*),Special Move
+• Amplify,AMP,Mid,9,N/A,0,9,5,19,N/A,8,-7,-7,KRUSHING BLOW: Triggers if opponent BLOCKS LATE.,Requires: Shoulder Charge (*),Special Move
+Flippin' Out,DB3,Mid (Ranged - Directable),"11,1","3,5","0,0019",34,18,46,N/A,3,-27,-27,,Requires: Flippin' Out (*),Special Move
+Close Flippin' Out,"DB3,B",Mid (Ranged - Directable),"11,1","3,5","0,0019",34,18,46,N/A,3,-27,-27,,Requires: Flippin' Out (*),Special Move
+Far Flippin' Out,"DB3,F",Mid (Ranged - Directable),"11,1","3,5","0,0019",34,18,46,N/A,3,-27,-27,,Requires: Flippin' Out (*),Special Move
+BLB-118 Escape,"D,U+B",N/A,N/A,N/A,0,1,N/A,60,N/A,N/A,N/A,N/A,,Requires: Air BLB-118 Advance (*),Special Move
+Air BLB-118 Peacing Out,"D,U+F",N/A,N/A,N/A,0,1,N/A,61,N/A,N/A,N/A,N/A,,Requires: Air BLB-118 Advance (*),Special Move
+Control BLB-118,BD2,N/A (Stance),N/A,N/A,0,1,N/A,350,328,N/A,N/A,N/A,,Requires: Control BLB-118 (**),Special Move
+• Cancel BLB-118,2,N/A,6,N/A,"0,0018",1,N/A,21,N/A,-20,N/A,N/A,,Requires: Control BLB-118 (**),Special Move
+• Dropping Balls,4,Low (Projectile),6,"1,75","0,0018",35,4,314,330,-258,-287,-287,,Requires: Control BLB-118 (**),Special Move
+• Wub Wub Wub,3,Mid (Projectile),"6,25","1,25","0,0012",19,10,271,280,-172,-254,-254,,Requires: Control BLB-118 (**),Special Move
+• Fun Phaser,1,Mid (Projectile),7,"1,88","0,0019",20,16,203,219,-180,-192,-192,,Requires: Control BLB-118 (**),Special Move
+BLB-118 Energy Burst,DB4,Mid (Proximity),6,"1,75","0,0018",21,6,34,20,10,-29,-29,,Requires: BLB-118 Energy Burst (**),Special Move
+• Amplify,AMP,Mid (Proximity),6,"1,75","0,0018",2,8,37,N/A,19,-29,-29,,Requires: BLB-118 Energy Burst (**),Special Move
+BLB-118 Bitchin' Bubble,DB4,N/A (Proximity),N/A,N/A,0,21,N/A,N/A,N/A,N/A,N/A,N/A,,Requires: BLB-118 Bitchin' Bubble (*),Special Move
+Kneecappin,DB1,Mid (Projectile),6,"1,75","0,0018",15,N/A,N/A,25,16,-25,-25,,Requires: Kneecappin' (*),Special Move
+• Amplify,AMP,High (Projectile),"7,4",3,"0,0016",12,N/A,N/A,N/A,50,-21,-21,,Requires: Kneecappin' (*),Special Move
+BLB-118 Energy Bounce,DB1,Low (Ranged - Directable),6,"1,75","0,0018",65,4,N/A,N/A,63,24,24,,Requires: BLB-118 Energy Bounce (*),Special Move
+Close BLB-118 Energy Bounce,"DB1,B",Low (Ranged - Directable),6,"1,75","0,0018",64,4,N/A,N/A,62,23,23,,Requires: BLB-118 Energy Bounce (*),Special Move
+Far BLB-118 Energy Bounce,"DB1,F",Low (Ranged - Directable),6,"1,75","0,0018",75,4,N/A,N/A,73,34,34,,Requires: BLB-118 Energy Bounce (*),Special Move
+BLB-118 Bullet Ricochet,DB1,Mid (Ranged - Directablle),6,"1,75","0,0018",23,12,20,N/A,7,-15,-15,,Requires: BLB-118 Bullet Ricochet (*),Special Move
+Close BLB-118 Bullet Ricochet,"DB1,B",N/A (Ranged - Directablle),6,N/A,"0,0018",23,N/A,32,N/A,-32,N/A,N/A,,Requires: BLB-118 Bullet Ricochet (*),Special Move
+Far BLB-118 Bullet Ricochet,"DB1,F",N/A (Ranged - Directablle),6,N/A,"0,0018",23,N/A,32,N/A,-32,N/A,N/A,,Requires: BLB-118 Bullet Ricochet (*),Special Move
+Pissed AF,STANCE+BLOCK,Overhead,32,"1,5","0,0015",32,4,31,N/A,18,-15,-20,,,Fatal Blow
+(Close) Pissed AF,B+STANCE+BLOCK,Overhead,32,"1,5","0,0015",32,4,31,N/A,18,-15,-20,,,Fatal Blow
+(Far) Pissed AF,F+STANCE+BLOCK,Overhead,32,"1,5","0,0015",32,4,31,N/A,18,-15,-20,,,Fatal Blow
+(Air) Pissed AF,STANCE+BLOCK,Overhead,32,"1,5","0,0015",32,4,31,N/A,18,-15,-20,,,Fatal Blow
+I >3 U (Mid) ,DDF4,,,,,,,,,,,,,,Fatality
+#GirlPower (Mid) ,BDDB2,,,,,,,,,,,,,,Fatality
