@@ -5,6 +5,7 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('', views.Characters.as_view(), name='characters'),
+    path('notes', views.Notebook.as_view(), name='notes'),
     path('baraka', views.BarakaFrames.as_view(), name='baraka'),
     path('cassie', views.CassieFrames.as_view(), name='cassie'),
 #     path('login/', views.user_login, name='login'),
@@ -23,6 +24,5 @@ urlpatterns = [
          auth_views.PasswordResetCompleteView.as_view(),
          name='password_reset_complete'),
     path('register/', views.register, name='register'),
-
-
+#     path('register/', views.RegisterView.as_view(), name='register'),
 ]
