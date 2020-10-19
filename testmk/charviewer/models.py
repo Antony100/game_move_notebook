@@ -1,4 +1,7 @@
 from django.db import models
+from django.conf import settings
+from django.db import models
+
 
 class Character(models.Model):
 
@@ -52,3 +55,11 @@ class Moves(models.Model):
     class Meta:
         def __str__(self):
             return self.move_name
+
+
+class Profile(models.Model):
+    user = models.OneToOneField(settings.AUTH_USER_MODEL,
+                                on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'Profile for user {self.user.username}'
