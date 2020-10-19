@@ -9,6 +9,7 @@ from charviewer.models import Moves
 from .forms import LoginForm
 from .models import Profile
 from django.contrib import messages
+from django.contrib.auth.models import User
 
 class Characters(LoginRequiredMixin, TemplateView):
     template_name = 'charviewer/characters.html'
@@ -38,9 +39,11 @@ def register(request):
             # Create a new user object but avoid saving it yet
             new_user = user_form.save(commit=False)
             # Set the chosen password
-            new_user.set_password(
-                user_form.cleaned_data['password'])
+            # new_user.set_password(
+            #     user_form.cleaned_data['password'])
             # Save the User object
+            new_user.email = user_form.cleaned_data['email']
+            print(new_user.email)
             new_user.save()
             # Profile.objects.create(user=new_user)
             return render(request,
@@ -54,24 +57,7 @@ def register(request):
 
 
 
-
-
-
-
-
-
-
-
-
-
 # class RegisterView(FormView):
 #     form_class = UserRegistrationForm
 #     template_name = 'registration/register.html'
-#     # success_url = reverse_lazy('login')
-
-
-#     def form_valid(self, form):
-#         new_user = form.save(commit=False)
-#         new_user.set_password(form.cleaned_data['password'])
-#         new_user.save()
-#         return HttpResponseRedirect(reverse_lazy('login'))
+#     success_url = reverse_lazy('login')
