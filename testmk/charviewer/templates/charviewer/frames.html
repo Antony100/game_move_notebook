@@ -1,20 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-{% load static %}
-<link href=" {% static '/css/frames.css' %} " rel="stylesheet">
-</head>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baraka</title>
-</head>
-<body>
+{% extends "base.html" %}
     {% block content %}
     {% for move in moves %}
         <h1> {{moves.character_id}} </h1>
     {% endfor %}
-    <table class ="blueTable">
+    <table class ="table table-striped">
         <tr>
             <th>Move</th>
             <th>Input</th>
