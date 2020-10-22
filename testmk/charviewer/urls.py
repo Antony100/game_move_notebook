@@ -4,10 +4,10 @@ from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
-    path('', views.Characters.as_view(), name='characters'),
-    path('notes', views.Notebook.as_view(), name='notes'),
-    path('baraka', views.BarakaFrames.as_view(), name='baraka'),
-    path('cassie', views.CassieFrames.as_view(), name='cassie'),
+    path('characters/', views.Characters.as_view(), name='characters'),
+    path('notes/', views.Notebook.as_view(), name='notes'),
+    path('baraka/', views.BarakaFrames.as_view(), name='baraka'),
+    path('cassie/', views.CassieFrames.as_view(), name='cassie'),
 #     path('login/', views.user_login, name='login'),
     path('login/', auth_views.LoginView.as_view(), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
