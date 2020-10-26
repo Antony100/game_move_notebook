@@ -1,9 +1,15 @@
 {% extends "base.html" %}
     {% block content %}
-    {% for move in moves %}
-        <h1> {{moves.character_id}} </h1>
-    {% endfor %}
-    <table class ="table table-striped">
+<div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <!--h5 class="mb-0"-->
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          Special Attacks
+        </button>
+      </h5>
+    </div>
+    <table class ="table table-striped table-hover table-sm collapse" id="collapseOne" data-parent="#accordian" aria-labelledby="headingOne">
         <tr>
             <th>Move</th>
             <th>Input</th>
@@ -20,33 +26,28 @@
             <th>flawless block adv</th>
             <th>info</th>
             <th>equip</th>
-            <th>classification</th>
-            <th>character id</th>
         </tr>
         {% for move in moves %}
-        <tr>
-            <td>{{ move.move_name }}</td>
-            <td>{{ move.move_input }}</td>
-            <td>{{ move.move_type }}</td>
-            <td>{{ move.damage }}</td>
-            <td>{{ move.block_damage }}</td>
-            <td>{{ move.f_block_damage }}</td>
-            <td>{{ move.startup }}</td>
-            <td>{{ move.Active }}</td>
-            <td>{{ move.Recovery }}</td>
-            <td>{{ move.cancel_adv }}</td>
-            <td>{{ move.hit_adv }}</td>
-            <td>{{ move.block_adv }}</td>
-            <td>{{ move.f_block_adv }}</td>
-            <td>{{ move.info }}</td>
-            <td>{{ move.equip }}</td>
-            <td>{{ move.classification }}</td>
-            <td>{{ move.character_id }}</td>
-
-        </tr>
+            {% if move.classification == "Special Move" %}
+                <tr>
+                    <td>{{ move.move_name }}</td>
+                    <td>{{ move.move_input }}</td>
+                    <td>{{ move.move_type }}</td>
+                    <td>{{ move.damage }}</td>
+                    <td>{{ move.block_damage }}</td>
+                    <td>{{ move.f_block_damage }}</td>
+                    <td>{{ move.startup }}</td>
+                    <td>{{ move.Active }}</td>
+                    <td>{{ move.Recovery }}</td>
+                    <td>{{ move.cancel_adv }}</td>
+                    <td>{{ move.hit_adv }}</td>
+                    <td>{{ move.block_adv }}</td>
+                    <td>{{ move.f_block_adv }}</td>
+                    <td>{{ move.info }}</td>
+                    <td>{{ move.equip }}</td>
+                {% endif %}
+                </tr>
         {% endfor %}
     </table>
+{% endblock %}
 
-    {% endblock %}
-</body>
-</html>

@@ -1,6 +1,45 @@
 {% extends "base.html" %}
-{% block title %}Create an account{% endblock %}
+{% block title %}Notes{% endblock %}
 {% block content %}
-<h1>Notebook</h1>
-<p>This is where the notes go</p>
+    <h1>Notebook</h1>
+    <table class="card-body table table-striped table-hover table-sm">
+        <tr>
+            <th>Move</th>
+            <th>Input</th>
+            <th>Type</th>
+            <th>damage</th>
+            <th>block dmg</th>
+            <th>flawless block dmg</th>
+            <th>Startup</th>
+            <th>Active</th>
+            <th>Recovery</th>
+            <th>cancel adv</th>
+            <th>hit adv</th>
+            <th>block adv</th>
+            <th>flawless block adv</th>
+            <th>info</th>
+            <th>equip</th>
+        </tr>
+        {% for move in moves %}
+        {% if move.classification == "Special Move" %}
+        <tr>
+            <td>{{ move.move_name }}</td>
+            <td>{{ move.move_input }}</td>
+            <td>{{ move.move_type }}</td>
+            <td>{{ move.damage }}</td>
+            <td>{{ move.block_damage }}</td>
+            <td>{{ move.f_block_damage }}</td>
+            <td>{{ move.startup }}</td>
+            <td>{{ move.Active }}</td>
+            <td>{{ move.Recovery }}</td>
+            <td>{{ move.cancel_adv }}</td>
+            <td>{{ move.hit_adv }}</td>
+            <td>{{ move.block_adv }}</td>
+            <td>{{ move.f_block_adv }}</td>
+            <td>{{ move.info }}</td>
+            <td>{{ move.equip }}</td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+    </table>
 {% endblock %}

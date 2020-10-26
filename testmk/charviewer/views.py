@@ -45,7 +45,6 @@ def register(request):
             new_user.email = user_form.cleaned_data['email']
             print(new_user.email)
             new_user.save()
-            # Profile.objects.create(user=new_user)
             return render(request,
                           'registration/register_done.html',
                           {'new_user': new_user})

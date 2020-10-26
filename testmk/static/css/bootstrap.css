@@ -168,8 +168,8 @@ a {
 }
 
 a:hover {
-  color: #0056b3;
-  text-decoration: underline;
+  color: #E0A11A;
+  text-decoration: none;
 }
 
 a:not([href]):not([tabindex]) {
@@ -1727,7 +1727,7 @@ pre code {
 }
 
 .table-hover .table-primary:hover {
-  background-color: #9fcdff;
+  background-color: #fff19f;
 }
 
 .table-hover .table-primary:hover > td,
@@ -4330,7 +4330,7 @@ tbody.collapse.show {
 }
 
 .navbar-light .navbar-brand {
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(224, 161, 26) !important;
 }
 
 .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
@@ -4425,6 +4425,15 @@ tbody.collapse.show {
   color: #fff;
 }
 
+.user {
+  color: rgb(216, 216, 216) !important;
+}
+.user a {
+  color: rgb(216, 216, 216) !important;
+}
+.user a:hover {
+  color: rgb(224, 161, 26)!important;
+}
 .card {
   position: relative;
   display: -webkit-box;
