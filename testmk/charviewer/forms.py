@@ -2,6 +2,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.db import models
 from django import forms
+from charviewer.models import Notes
 
 class LoginForm(forms.Form):
     username = forms.CharField(label='username', max_length=100)
@@ -10,6 +11,16 @@ class LoginForm(forms.Form):
 
 class UserRegistrationForm(UserCreationForm):
     email = forms.EmailField()
+
+
+class NoteForm(forms.ModelForm):
+    class Meta:
+        model = Notes
+
+        fields = [
+            'note',
+        ]
+
 
     # class meta:
     #     model = User
@@ -38,6 +49,9 @@ class UserRegistrationForm(UserCreationForm):
         else:
             return self.cleaned_data['email']
 
+
+class IdForm(forms.ModelForm):
+    move_id = forms.IntegerField()
 
 # class UserRegistrationForm(forms.ModelForm):
 #     password = forms.CharField(label='Password',

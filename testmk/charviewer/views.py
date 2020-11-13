@@ -3,13 +3,13 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views.generic import View, ListView, TemplateView, CreateView, FormView
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
 from charviewer.models import Moves
-from .forms import LoginForm
-from .models import Profile
+from .forms import LoginForm, NoteForm
 from django.contrib import messages
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 class Characters(LoginRequiredMixin, TemplateView):
     template_name = 'charviewer/characters.html'
@@ -18,7 +18,24 @@ class Characters(LoginRequiredMixin, TemplateView):
 class BarakaFrames(LoginRequiredMixin, ListView):
     template_name = 'charviewer/frames.html'
     queryset = Moves.objects.filter(character_id=1)
-    context_object_name = 'moves'
+    # context_object_name = 'moves'
+
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['moves'] = Moves.objects.filter(character_id=1)
+        return context
+
+        return HttpResponseRedirect(reverse('notes'))
+
+    # def get_move_id(self, request, *args, **kwargs):
+    #     move_id = request.GET.get('move_id')
+    #     print(move_id)
+    #     return move_id
+
+
+
+
 
 
 class CassieFrames(LoginRequiredMixin, ListView):
@@ -27,9 +44,30 @@ class CassieFrames(LoginRequiredMixin, ListView):
     context_object_name = 'moves'
 
 
-class Notebook(LoginRequiredMixin, TemplateView):
+class Notebook(LoginRequiredMixin, FormView):
     template_name = 'charviewer/notes.html'
+    queryset = Moves.objects.filter(character_id=1)
+    form_class = NoteForm
+    # initial = {'move_id': BarakaFrames.get_move_id()}
+    print()
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['moves'] = Moves.objects.filter(character_id=1)
+        # context['move_id'] = self.initial['move_id']
+        return context
+
+    # def get_success_url(self):
+    #     return reverse('notes')
+
+    def form_valid(self, form):
+        note = form.save(commit=False)
+        note.author = self.request.user
+        # note.move_id = BarakaFrames.get_move_id()
+
+        note.save()
+
+        return HttpResponseRedirect(reverse('notes'))
 
 def register(request):
     if request.method == 'POST':
@@ -54,6 +92,9 @@ def register(request):
                   'registration/register.html',
                   {'user_form': user_form})
 
+
+class ShowId(LoginRequiredMixin, TemplateView):
+    template_name = 'charviewer/showid.html'
 
 
 # class RegisterView(FormView):

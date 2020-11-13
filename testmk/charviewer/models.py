@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Character(models.Model):
@@ -57,9 +58,14 @@ class Moves(models.Model):
             return self.move_name
 
 
-class Profile(models.Model):
-    user = models.OneToOneField(settings.AUTH_USER_MODEL,
-                                on_delete=models.CASCADE)
+class Notes(models.Model):
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    note = models.TextField()
+    move_id = models.IntegerField()
 
-    def __str__(self):
-        return f'Profile for user {self.user.username}'
+# class Profile(models.Model):
+#     user = models.OneToOneField(settings.AUTH_USER_MODEL,
+#                                 on_delete=models.CASCADE)
+
+#     def __str__(self):
+#         return f'Profile for user {self.user.username}'
