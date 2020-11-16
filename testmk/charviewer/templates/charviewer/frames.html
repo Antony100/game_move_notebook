@@ -53,8 +53,9 @@
                 <!-- <form method="get">
                     <a href="{%url 'notes' %}" name="move_id" value={{ move.id }}> add note </a>
                 </form> -->
-                <form method="get">
-                    <a href="{%url 'notes' %}" name="move_id" value={{ move.id }}> add note </a>
+                <form method="post">
+                    {{form.as_p}}
+                    <a href="{%url 'add_note' %}" name="move_id" value={{ move.id }}> add note </a>
                 </form>
 
             </td>
@@ -226,16 +227,5 @@
     </table>
   </div>
 
-  <form method="post">
-      {{ form|crispy }}
-      {% csrf_token %}
-      <input type="submit" value="add note">
-  </form>
-
-</div>
-
 
 {% endblock %}
-
-<!-- basic attack, Kombo attack, special, Throws, jump attacks/hop attacks,
-     flawlessblock, getup attack, Roll escape/ Air escape, Fatal blow, fatality,  -->
