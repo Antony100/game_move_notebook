@@ -50,26 +50,12 @@
             <td>{{ move.info }}</td>
             <td>{{ move.equip }}</td>
             <td>
-                <!-- <form method="get">
-                    <a href="{%url 'notes' %}" name="move_id" value={{ move.id }}> add note </a>
-                </form> -->
-                <form method="post">
-                    {{form.as_p}}
-                    <a href="{%url 'add_note' %}" name="move_id" value={{ move.id }}> add note </a>
+                <form method="POST">
+                    {% csrf_token %}
+                    <button name="move_id" type="submit" value={{ move.id }}> add note </a>
                 </form>
-
             </td>
 
-
-
-            <!-- <td>
-                <form method="post">
-                {{form}}
-                {% csrf_token %}
-                <input type="text">
-                <input type="submit" value="add note">
-                </form>
-            </td> -->
         </tr>
         {% endif %}
         {% endfor %}
@@ -229,3 +215,10 @@
 
 
 {% endblock %}
+
+                <!-- <form method="get">
+                                    <a href="{%url 'notes' %}" name="move_id" value={{ move.id }}> add note </a>
+                                </form> -->
+                <!-- <form method="post">
+                    {{form.as_p}}
+                    <a href="{%url 'add_note' %}" name="move_id" value={{ move.id }}> add note </a> -->

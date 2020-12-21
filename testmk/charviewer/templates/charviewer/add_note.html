@@ -1,12 +1,9 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
-{% block title %}Notes{% endblock %}
+{% block title %}Add note{% endblock %}
 {% block content %}
 
-    <h1>Notebook</h1>
-    <p> Notes go here</p>
-
-    <h1> the move ID is {{move_id}}</h1>
+    <h1>Add note</h1>
 
 <div id="table">
     <table class="table table-striped table-hover table-sm" id="basic-attacks"
@@ -29,7 +26,6 @@
             <th>equip</th>
         </tr>
         {% for move in moves %}
-        {% if move.id == move_id %}
         <tr class="text-center">
             <td>{{ move.move_name }}</td>
             <td>{{ move.move_input }}</td>
@@ -47,13 +43,28 @@
             <td>{{ move.info }}</td>
             <td>{{ move.equip }}</td>
         </tr>
-        {% endif %}
-        {% endfor %}
+    </table>
 </div>
 
-<form method="post">
-    {{ form|crispy }}
+
+<form method="POST">
+    {% csrf_token %}
+    <p><label for="id_note">Note:</label></p>
+        <p>
+            <textarea id="id_note" type="text" name="note" cols="100" rows="10" maxlength="100"></textarea></p>
+            <input id="id_move_id" hidden readonly name="move_id" maxlength="100" value="{{move.id}}">
+        <p><input type="submit" value="add note"></p>
+</form>
+    {% endfor %}
+
+{% for note in note %}
+   <h1> {{note.note}} </h1>
+{% endfor %}
+
+
+<!-- <form method="post">
+    {{ form.as_p}}
     {% csrf_token %}
     <p><input type="submit" value="add note"></p>
-</form>
+</form> -->
 {% endblock %}

@@ -60,8 +60,12 @@ class Moves(models.Model):
 
 class Notes(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    note = models.TextField()
+    note = models.CharField(max_length=300)
     move_id = models.IntegerField()
+
+    class Meta:
+        def __str__(self):
+            return self.note
 
 # class Profile(models.Model):
 #     user = models.OneToOneField(settings.AUTH_USER_MODEL,

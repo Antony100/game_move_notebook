@@ -18,6 +18,13 @@ class NoteForm(forms.ModelForm):
             'move_id',
         ]
 
+    # def check_note_exists(self):
+    #     note = self.cleaned_data.get('move_id')
+    #     if Notes.objects.filter(move_id=note).exists():
+    #         raise forms.ValidationError(
+    #             'This note already exists.')
+
+
 
 class UserRegistrationForm(UserCreationForm):
     email = forms.EmailField()
