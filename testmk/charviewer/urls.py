@@ -4,13 +4,21 @@ from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
-    path('', views.Characters.as_view(), name='characters'),
-    path('notes', views.Notebook.as_view(), name='notes'),
-    path('baraka', views.BarakaFrames.as_view(), name='baraka'),
-    path('cassie', views.CassieFrames.as_view(), name='cassie'),
-#     path('login/', views.user_login, name='login'),
+    path('characters/', views.Characters.as_view(), name='characters'),
+    path('add_note/', views.AddNoteView.as_view(), name='add_note'),
+    path('update_note/<int:pk>/', views.UpdateNoteView.as_view(), name='update_note'),
+    path('delete_note/<int:pk>/', views.DeleteNoteView.as_view(), name='delete_note'),
+    path('notes/', views.Notebook.as_view(), name='notes'),
+    path('baraka/', views.BarakaFrames.as_view(), name='baraka'),
+#     path('baraka/', views.barakaframes, name='baraka'),
+    path('cassie/', views.CassieFrames.as_view(), name='cassie'),
+    # Authentication
     path('login/', auth_views.LoginView.as_view(), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+#     path('register/', views.register, name='register'),
+    path('register/', views.RegisterView.as_view(), name='register'),
+    path('register_done/', views.RegisterDoneView.as_view(), name='register_done'),
+
     path('password_reset/',
          auth_views.PasswordResetView.as_view(),
          name='password_reset'),
@@ -23,6 +31,5 @@ urlpatterns = [
     path('reset/done/',
          auth_views.PasswordResetCompleteView.as_view(),
          name='password_reset_complete'),
-    path('register/', views.register, name='register'),
-#     path('register/', views.RegisterView.as_view(), name='register'),
+     path('expand/', views.Expandview.as_view(), name='expand'),
 ]
