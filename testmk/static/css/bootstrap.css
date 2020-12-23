@@ -1672,7 +1672,6 @@ pre code {
   max-width: 90%;
   margin-bottom: 2rem;
   background-color: transparent;
-  margin-left: 2rem;
 }
 
 .table th,
@@ -1716,12 +1715,26 @@ pre code {
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(161, 182, 244, 0.73);
+  background-color: rgba(36, 38, 42, 0.479);
   padding: 1rem;
 }
 
 .table-hover tbody tr:hover {
-  background-color: rgba(0, 0, 0, 0.075);
+  background-color: rgba(185, 185, 185, 0.658);
+}
+.t-font-colour-green {
+  color:rgba(2, 78, 20, 0.938) !important;
+  font-weight: bold;
+}
+
+.t-font-colour-red {
+  color:#9c0000; !important;
+  font-weight: bold;
+}
+
+.t-font-colour-blue {
+  color:#0000be !important;
+  font-weight: bold;
 }
 
 .table-primary,
@@ -1887,7 +1900,7 @@ pre code {
 }
 
 .table-dark.table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(218, 224, 237, 0.49);
 }
 
 .table-dark.table-hover tbody tr:hover {
@@ -3051,13 +3064,13 @@ fieldset:disabled a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #007bff;
+  color: #ffffff;
   background-color: transparent;
 }
 
 .btn-link:hover {
-  color: #0056b3;
-  text-decoration: underline;
+  color: rgba(224, 161, 26) !important;
+  text-decoration: None;
   background-color: transparent;
   border-color: transparent;
 }
@@ -4452,8 +4465,10 @@ tbody.collapse.show {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  max-width: 70%;
+  margin-left: 10%;
 }
 
 .card > hr {
@@ -4502,7 +4517,7 @@ tbody.collapse.show {
 .card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 1rem;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: #252728;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
@@ -6159,13 +6174,36 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #343a40 !important;
+  background-color: #252728 !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
 button.bg-dark:hover,
 button.bg-dark:focus {
   background-color: #1d2124 !important;
+}
+
+.table-button {
+	background:linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+	background-color:#74ad5a;
+	border-radius:10px;
+	border:1px solid #3b6e22;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:3px 4px;
+	text-decoration:none;
+}
+.table-button:hover {
+	background:linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+	background-color:#77a809;
+}
+.table-button:active {
+	position:relative;
+	top:1px;
 }
 
 .bg-white {

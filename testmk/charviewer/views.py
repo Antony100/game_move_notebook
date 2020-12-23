@@ -49,6 +49,17 @@ class CassieFrames(LoginRequiredMixin, ListView):
     queryset = Moves.objects.filter(character_id=2)
     context_object_name = 'moves'
 
+    def get_context_data(self, **kwargs):
+        context = super(CassieFrames, self).get_context_data(**kwargs)
+        context['moves'] = self.queryset
+        return context
+
+    def post(self, request, *args, **kwargs):
+        request.session['move'] = request.POST.get('move_id')
+        print(
+            f"the move taken from the frames page is: {request.session['move']}")
+        return HttpResponseRedirect(reverse('add_note'))
+
 
 class Notebook(LoginRequiredMixin, ListView):
     template_name = 'charviewer/notes.html'
