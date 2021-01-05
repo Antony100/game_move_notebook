@@ -6,7 +6,7 @@
 
   <div class="card">
     <div class="card-header" id="heading-basic">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#basic-attacks" aria-expanded="false"
+        <button class="btn btn-link navbar-light" data-toggle="collapse" data-target="#basic-attacks" aria-expanded="false"
             aria-controls="basic-attacks">
             Basic Attacks
         </button>
@@ -15,44 +15,44 @@
     <table class="table table-striped table-hover table-sm collapse" id="basic-attacks" data-parent="#accordian"
         aria-labelledby="heading-basic">
         <tr class="text-center">
-            <th>Move</th>
-            <th>Input</th>
-            <th>Type</th>
-            <th>damage</th>
-            <th>block dmg</th>
-            <th>flawless block dmg</th>
-            <th>Startup</th>
-            <th>Active</th>
-            <th>Recovery</th>
-            <th>cancel adv</th>
-            <th>hit adv</th>
-            <th>block adv</th>
-            <th>flawless block adv</th>
+            <th class="font-weight-bold">Move</th>
+            <th class="font-weight-bold">Input</th>
+            <th class="font-weight-bold">Type</th>
+            <th class="t-font-colour-red">damage</th>
+            <th class="t-font-colour-red">block dmg</th>
+            <th class="t-font-colour-red">flawless block dmg</th>
+            <th class="t-font-colour-green">Startup</th>
+            <th class="t-font-colour-green">Active</th>
+            <th class="t-font-colour-green">Recovery</th>
+            <th class="t-font-colour-blue">cancel adv</th>
+            <th class="t-font-colour-blue">hit adv</th>
+            <th class="t-font-colour-blue">block adv</th>
+            <th class="t-font-colour-blue">flawless block adv</th>
             <th>info</th>
-            <th>equip</th>
+            <th class="text-left" colspan="2">equip</th>
         </tr>
         {% for move in moves %}
         {% if move.classification == "Basic Attack"%}
         <tr class="text-center">
-            <td>{{ move.move_name }}</td>
-            <td>{{ move.move_input }}</td>
-            <td>{{ move.move_type }}</td>
-            <td>{{ move.damage }}</td>
-            <td>{{ move.block_damage }}</td>
-            <td>{{ move.f_block_damage }}</td>
-            <td>{{ move.startup }}</td>
-            <td>{{ move.Active }}</td>
-            <td>{{ move.Recovery }}</td>
-            <td>{{ move.cancel_adv }}</td>
-            <td>{{ move.hit_adv }}</td>
-            <td>{{ move.block_adv }}</td>
-            <td>{{ move.f_block_adv }}</td>
+            <td class="font-weight-bold">{{ move.move_name }}</td>
+            <td class="font-weight-bold">{{ move.move_input }}</td>
+            <td class="font-weight-bold">{{ move.move_type }}</td>
+            <td class="t-font-colour-red">{{ move.damage }}</td>
+            <td class="t-font-colour-red">{{ move.block_damage }}</td>
+            <td class="t-font-colour-red">{{ move.f_block_damage }}</td>
+            <td class="t-font-colour-green">{{ move.startup }}</td>
+            <td class="t-font-colour-green">{{ move.Active }}</td>
+            <td class="t-font-colour-green">{{ move.Recovery }}</td>
+            <td class="t-font-colour-blue">{{ move.cancel_adv }}</td>
+            <td class="t-font-colour-blue">{{ move.hit_adv }}</td>
+            <td class="t-font-colour-blue">{{ move.block_adv }}</td>
+            <td class="t-font-colour-blue">{{ move.f_block_adv }}</td>
             <td>{{ move.info }}</td>
             <td>{{ move.equip }}</td>
             <td>
                 <form method="POST">
                     {% csrf_token %}
-                    <button name="move_id" type="submit" value={{ move.id }}> add note </a>
+                    <button class="table-button"  name="move_id" type="submit" value={{ move.id }}>add note</a>
                 </form>
             </td>
 
@@ -72,41 +72,47 @@
 
         <table class="table table-striped table-hover table-sm collapse" id="kombo-attacks" data-parent="#accordian"
             aria-labelledby="heading-kombo">
-            <tr>
-                <th>Move</th>
-                <th>Input</th>
-                <th>Type</th>
-                <th>damage</th>
-                <th>block dmg</th>
-                <th>flawless block dmg</th>
-                <th>Startup</th>
-                <th>Active</th>
-                <th>Recovery</th>
-                <th>cancel adv</th>
-                <th>hit adv</th>
-                <th>block adv</th>
-                <th>flawless block adv</th>
+            <tr class="text-center">
+                <th class="font-weight-bold">Move</th>
+                <th class="font-weight-bold">Input</th>
+                <th class="font-weight-bold">Type</th>
+                <th class="t-font-colour-red">damage</th>
+                <th class="t-font-colour-red">block dmg</th>
+                <th class="t-font-colour-red">flawless block dmg</th>
+                <th class="t-font-colour-green">Startup</th>
+                <th class="t-font-colour-green">Active</th>
+                <th class="t-font-colour-green">Recovery</th>
+                <th class="t-font-colour-blue">cancel adv</th>
+                <th class="t-font-colour-blue">hit adv</th>
+                <th class="t-font-colour-blue">block adv</th>
+                <th class="t-font-colour-blue">flawless block adv</th>
                 <th>info</th>
-                <th>equip</th>
+                <th class="text-left" colspan="2">equip</th>
             </tr>
             {% for move in moves %}
             {% if move.classification == "Kombo Attack" %}
-            <tr>
-                <td>{{ move.move_name }}</td>
-                <td>{{ move.move_input }}</td>
-                <td>{{ move.move_type }}</td>
-                <td>{{ move.damage }}</td>
-                <td>{{ move.block_damage }}</td>
-                <td>{{ move.f_block_damage }}</td>
-                <td>{{ move.startup }}</td>
-                <td>{{ move.Active }}</td>
-                <td>{{ move.Recovery }}</td>
-                <td>{{ move.cancel_adv }}</td>
-                <td>{{ move.hit_adv }}</td>
-                <td>{{ move.block_adv }}</td>
-                <td>{{ move.f_block_adv }}</td>
+            <tr class="text-center">
+                <td class="font-weight-bold">{{ move.move_name }}</td>
+                <td class="font-weight-bold">{{ move.move_input }}</td>
+                <td class="font-weight-bold">{{ move.move_type }}</td>
+                <td class="t-font-colour-red">{{ move.damage }}</td>
+                <td class="t-font-colour-red">{{ move.block_damage }}</td>
+                <td class="t-font-colour-red">{{ move.f_block_damage }}</td>
+                <td class="t-font-colour-green">{{ move.startup }}</td>
+                <td class="t-font-colour-green">{{ move.Active }}</td>
+                <td class="t-font-colour-green">{{ move.Recovery }}</td>
+                <td class="t-font-colour-blue">{{ move.cancel_adv }}</td>
+                <td class="t-font-colour-blue">{{ move.hit_adv }}</td>
+                <td class="t-font-colour-blue">{{ move.block_adv }}</td>
+                <td class="t-font-colour-blue">{{ move.f_block_adv }}</td>
                 <td>{{ move.info }}</td>
                 <td>{{ move.equip }}</td>
+                <td>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <button class="table-button" name="move_id" type="submit" value={{ move.id }}>add note</a>
+                    </form>
+                </td>
                 {% endif %}
             </tr>
             {% endfor %}
@@ -121,43 +127,49 @@
     </div>
 
     <table class ="table table-striped table-hover table-sm collapse" id="special-attacks" data-parent="#accordian" aria-labelledby="heading-special">
-        <tr>
-            <th>Move</th>
-            <th>Input</th>
-            <th>Type</th>
-            <th>damage</th>
-            <th>block dmg</th>
-            <th>flawless block dmg</th>
-            <th>Startup</th>
-            <th>Active</th>
-            <th>Recovery</th>
-            <th>cancel adv</th>
-            <th>hit adv</th>
-            <th>block adv</th>
-            <th>flawless block adv</th>
+        <tr class="text-center">
+            <th class="font-weight-bold">Move</th>
+            <th class="font-weight-bold">Input</th>
+            <th class="font-weight-bold">Type</th>
+            <th class="t-font-colour-red">damage</th>
+            <th class="t-font-colour-red">block dmg</th>
+            <th class="t-font-colour-red">flawless block dmg</th>
+            <th class="t-font-colour-green">Startup</th>
+            <th class="t-font-colour-green">Active</th>
+            <th class="t-font-colour-green">Recovery</th>
+            <th class="t-font-colour-blue">cancel adv</th>
+            <th class="t-font-colour-blue">hit adv</th>
+            <th class="t-font-colour-blue">block adv</th>
+            <th class="t-font-colour-blue">flawless block adv</th>
             <th>info</th>
-            <th>equip</th>
+            <th class="text-left" colspan="2">equip</th>
         </tr>
         {% for move in moves %}
             {% if move.classification == "Special Move" %}
-                <tr>
-                    <td>{{ move.move_name }}</td>
-                    <td>{{ move.move_input }}</td>
-                    <td>{{ move.move_type }}</td>
-                    <td>{{ move.damage }}</td>
-                    <td>{{ move.block_damage }}</td>
-                    <td>{{ move.f_block_damage }}</td>
-                    <td>{{ move.startup }}</td>
-                    <td>{{ move.Active }}</td>
-                    <td>{{ move.Recovery }}</td>
-                    <td>{{ move.cancel_adv }}</td>
-                    <td>{{ move.hit_adv }}</td>
-                    <td>{{ move.block_adv }}</td>
-                    <td>{{ move.f_block_adv }}</td>
-                    <td>{{ move.info }}</td>
-                    <td>{{ move.equip }}</td>
+            <tr class="text-center">
+                <td class="font-weight-bold">{{ move.move_name }}</td>
+                <td class="font-weight-bold">{{ move.move_input }}</td>
+                <td class="font-weight-bold">{{ move.move_type }}</td>
+                <td class="t-font-colour-red">{{ move.damage }}</td>
+                <td class="t-font-colour-red">{{ move.block_damage }}</td>
+                <td class="t-font-colour-red">{{ move.f_block_damage }}</td>
+                <td class="t-font-colour-green">{{ move.startup }}</td>
+                <td class="t-font-colour-green">{{ move.Active }}</td>
+                <td class="t-font-colour-green">{{ move.Recovery }}</td>
+                <td class="t-font-colour-blue">{{ move.cancel_adv }}</td>
+                <td class="t-font-colour-blue">{{ move.hit_adv }}</td>
+                <td class="t-font-colour-blue">{{ move.block_adv }}</td>
+                <td class="t-font-colour-blue">{{ move.f_block_adv }}</td>
+                <td>{{ move.info }}</td>
+                <td>{{ move.equip }}</td>
+                <td>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <button class="table-button" name="move_id" type="submit" value={{ move.id }}>add note</a>
+                    </form>
+                </td>
                 {% endif %}
-                </tr>
+            </tr>
         {% endfor %}
     </table>
   </div>
@@ -172,53 +184,513 @@
 
     <table class="table table-striped table-hover table-sm collapse" id="throws" data-parent="#accordian"
         aria-labelledby="heading-throws">
-        <tr>
-            <th>Move</th>
-            <th>Input</th>
-            <th>Type</th>
-            <th>damage</th>
-            <th>block dmg</th>
-            <th>flawless block dmg</th>
-            <th>Startup</th>
-            <th>Active</th>
-            <th>Recovery</th>
-            <th>cancel adv</th>
-            <th>hit adv</th>
-            <th>block adv</th>
-            <th>flawless block adv</th>
+        <tr class="text-center">
+            <th class="font-weight-bold">Move</th>
+            <th class="font-weight-bold">Input</th>
+            <th class="font-weight-bold">Type</th>
+            <th class="t-font-colour-red">damage</th>
+            <th class="t-font-colour-red">block dmg</th>
+            <th class="t-font-colour-red">flawless block dmg</th>
+            <th class="t-font-colour-green">Startup</th>
+            <th class="t-font-colour-green">Active</th>
+            <th class="t-font-colour-green">Recovery</th>
+            <th class="t-font-colour-blue">cancel adv</th>
+            <th class="t-font-colour-blue">hit adv</th>
+            <th class="t-font-colour-blue">block adv</th>
+            <th class="t-font-colour-blue">flawless block adv</th>
             <th>info</th>
-            <th>equip</th>
+            <th class="text-left" colspan="2">equip</th>
         </tr>
         {% for move in moves %}
         {% if move.classification == "Throw" %}
-        <tr>
-            <td>{{ move.move_name }}</td>
-            <td>{{ move.move_input }}</td>
-            <td>{{ move.move_type }}</td>
-            <td>{{ move.damage }}</td>
-            <td>{{ move.block_damage }}</td>
-            <td>{{ move.f_block_damage }}</td>
-            <td>{{ move.startup }}</td>
-            <td>{{ move.Active }}</td>
-            <td>{{ move.Recovery }}</td>
-            <td>{{ move.cancel_adv }}</td>
-            <td>{{ move.hit_adv }}</td>
-            <td>{{ move.block_adv }}</td>
-            <td>{{ move.f_block_adv }}</td>
+        <tr class="text-center">
+            <td class="font-weight-bold">{{ move.move_name }}</td>
+            <td class="font-weight-bold">{{ move.move_input }}</td>
+            <td class="font-weight-bold">{{ move.move_type }}</td>
+            <td class="t-font-colour-red">{{ move.damage }}</td>
+            <td class="t-font-colour-red">{{ move.block_damage }}</td>
+            <td class="t-font-colour-red">{{ move.f_block_damage }}</td>
+            <td class="t-font-colour-green">{{ move.startup }}</td>
+            <td class="t-font-colour-green">{{ move.Active }}</td>
+            <td class="t-font-colour-green">{{ move.Recovery }}</td>
+            <td class="t-font-colour-blue">{{ move.cancel_adv }}</td>
+            <td class="t-font-colour-blue">{{ move.hit_adv }}</td>
+            <td class="t-font-colour-blue">{{ move.block_adv }}</td>
+            <td class="t-font-colour-blue">{{ move.f_block_adv }}</td>
             <td>{{ move.info }}</td>
             <td>{{ move.equip }}</td>
+            <td>
+                <form method="POST">
+                    {% csrf_token %}
+                    <button class="table-button" name="move_id" type="submit" value={{ move.id }}>add note</a>
+                </form>
+            </td>
             {% endif %}
         </tr>
         {% endfor %}
     </table>
   </div>
 
+  <div class="card">
+      <div class="card-header" id="heading-jump-attacks">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#jump-attacks" aria-expanded="false"
+              aria-controls="jump-attacks">
+              Jumping Attacks
+          </button>
+      </div>
+
+      <table class="table table-striped table-hover table-sm collapse" id="jump-attacks" data-parent="#accordian"
+          aria-labelledby="heading-jump-attacks">
+          <tr class="text-center">
+              <th class="font-weight-bold">Move</th>
+              <th class="font-weight-bold">Input</th>
+              <th class="font-weight-bold">Type</th>
+              <th class="t-font-colour-red">damage</th>
+              <th class="t-font-colour-red">block dmg</th>
+              <th class="t-font-colour-red">flawless block dmg</th>
+              <th class="t-font-colour-green">Startup</th>
+              <th class="t-font-colour-green">Active</th>
+              <th class="t-font-colour-green">Recovery</th>
+              <th class="t-font-colour-blue">cancel adv</th>
+              <th class="t-font-colour-blue">hit adv</th>
+              <th class="t-font-colour-blue">block adv</th>
+              <th class="t-font-colour-blue">flawless block adv</th>
+              <th>info</th>
+              <th class="text-left" colspan="2">equip</th>
+          </tr>
+          {% for move in moves %}
+          {% if move.classification == "Jumping Attack" %}
+          <tr class="text-center">
+              <td class="font-weight-bold">{{ move.move_name }}</td>
+              <td class="font-weight-bold">{{ move.move_input }}</td>
+              <td class="font-weight-bold">{{ move.move_type }}</td>
+              <td class="t-font-colour-red">{{ move.damage }}</td>
+              <td class="t-font-colour-red">{{ move.block_damage }}</td>
+              <td class="t-font-colour-red">{{ move.f_block_damage }}</td>
+              <td class="t-font-colour-green">{{ move.startup }}</td>
+              <td class="t-font-colour-green">{{ move.Active }}</td>
+              <td class="t-font-colour-green">{{ move.Recovery }}</td>
+              <td class="t-font-colour-blue">{{ move.cancel_adv }}</td>
+              <td class="t-font-colour-blue">{{ move.hit_adv }}</td>
+              <td class="t-font-colour-blue">{{ move.block_adv }}</td>
+              <td class="t-font-colour-blue">{{ move.f_block_adv }}</td>
+              <td>{{ move.info }}</td>
+              <td>{{ move.equip }}</td>
+              <td>
+                  <form method="POST">
+                      {% csrf_token %}
+                      <button class="table-button" name="move_id" type="submit" value={{ move.id }}>add note</a>
+                  </form>
+              </td>
+              {% endif %}
+          </tr>
+          {% endfor %}
+      </table>
+  </div>
+
+  <div class="card">
+      <div class="card-header" id="heading-f-block-attack">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#f-block-attack" aria-expanded="false"
+              aria-controls="f-block-attack">
+              Flawless Block Attacks
+          </button>
+      </div>
+
+      <table class="table table-striped table-hover table-sm collapse" id="f-block-attack" data-parent="#accordian"
+          aria-labelledby="heading-f-block-attack">
+          <tr class="text-center">
+              <th class="font-weight-bold">Move</th>
+              <th class="font-weight-bold">Input</th>
+              <th class="font-weight-bold">Type</th>
+              <th class="t-font-colour-red">damage</th>
+              <th class="t-font-colour-red">block dmg</th>
+              <th class="t-font-colour-red">flawless block dmg</th>
+              <th class="t-font-colour-green">Startup</th>
+              <th class="t-font-colour-green">Active</th>
+              <th class="t-font-colour-green">Recovery</th>
+              <th class="t-font-colour-blue">cancel adv</th>
+              <th class="t-font-colour-blue">hit adv</th>
+              <th class="t-font-colour-blue">block adv</th>
+              <th class="t-font-colour-blue">flawless block adv</th>
+              <th>info</th>
+              <th class="text-left" colspan="2">equip</th>
+          </tr>
+          {% for move in moves %}
+          {% if move.classification == "Flawless Block Attack" %}
+          <tr class="text-center">
+              <td class="font-weight-bold">{{ move.move_name }}</td>
+              <td class="font-weight-bold">{{ move.move_input }}</td>
+              <td class="font-weight-bold">{{ move.move_type }}</td>
+              <td class="t-font-colour-red">{{ move.damage }}</td>
+              <td class="t-font-colour-red">{{ move.block_damage }}</td>
+              <td class="t-font-colour-red">{{ move.f_block_damage }}</td>
+              <td class="t-font-colour-green">{{ move.startup }}</td>
+              <td class="t-font-colour-green">{{ move.Active }}</td>
+              <td class="t-font-colour-green">{{ move.Recovery }}</td>
+              <td class="t-font-colour-blue">{{ move.cancel_adv }}</td>
+              <td class="t-font-colour-blue">{{ move.hit_adv }}</td>
+              <td class="t-font-colour-blue">{{ move.block_adv }}</td>
+              <td class="t-font-colour-blue">{{ move.f_block_adv }}</td>
+              <td>{{ move.info }}</td>
+              <td>{{ move.equip }}</td>
+              <td>
+                  <form method="POST">
+                      {% csrf_token %}
+                      <button class="table-button" name="move_id" type="submit" value={{ move.id }}>add note</a>
+                  </form>
+              </td>
+              {% endif %}
+          </tr>
+          {% endfor %}
+      </table>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading-hop-attack">
+      <button class="btn btn-link" data-toggle="collapse" data-target="#hop-attack" aria-expanded="false"
+        aria-controls="hop-attack">
+        Hop Attacks
+      </button>
+    </div>
+
+    <table class="table table-striped table-hover table-sm collapse" id="hop-attack" data-parent="#accordian"
+      aria-labelledby="hop-attack">
+      <tr class="text-center">
+        <th class="font-weight-bold">Move</th>
+        <th class="font-weight-bold">Input</th>
+        <th class="font-weight-bold">Type</th>
+        <th class="t-font-colour-red">damage</th>
+        <th class="t-font-colour-red">block dmg</th>
+        <th class="t-font-colour-red">flawless block dmg</th>
+        <th class="t-font-colour-green">Startup</th>
+        <th class="t-font-colour-green">Active</th>
+        <th class="t-font-colour-green">Recovery</th>
+        <th class="t-font-colour-blue">cancel adv</th>
+        <th class="t-font-colour-blue">hit adv</th>
+        <th class="t-font-colour-blue">block adv</th>
+        <th class="t-font-colour-blue">flawless block adv</th>
+        <th>info</th>
+        <th class="text-left" colspan="2">equip</th>
+      </tr>
+      {% for move in moves %}
+      {% if move.classification == "Hop Attack" %}
+      <tr class="text-center">
+        <td class="font-weight-bold">{{ move.move_name }}</td>
+        <td class="font-weight-bold">{{ move.move_input }}</td>
+        <td class="font-weight-bold">{{ move.move_type }}</td>
+        <td class="t-font-colour-red">{{ move.damage }}</td>
+        <td class="t-font-colour-red">{{ move.block_damage }}</td>
+        <td class="t-font-colour-red">{{ move.f_block_damage }}</td>
+        <td class="t-font-colour-green">{{ move.startup }}</td>
+        <td class="t-font-colour-green">{{ move.Active }}</td>
+        <td class="t-font-colour-green">{{ move.Recovery }}</td>
+        <td class="t-font-colour-blue">{{ move.cancel_adv }}</td>
+        <td class="t-font-colour-blue">{{ move.hit_adv }}</td>
+        <td class="t-font-colour-blue">{{ move.block_adv }}</td>
+        <td class="t-font-colour-blue">{{ move.f_block_adv }}</td>
+        <td>{{ move.info }}</td>
+        <td>{{ move.equip }}</td>
+        <td>
+          <form method="POST">
+            {% csrf_token %}
+            <button class="table-button" name="move_id" type="submit" value={{ move.id }}>add note</a>
+          </form>
+        </td>
+        {% endif %}
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading-getup-attack">
+      <button class="btn btn-link" data-toggle="collapse" data-target="#getup-attack" aria-expanded="false"
+        aria-controls="getup-attack">
+        Getup Attacks
+      </button>
+    </div>
+
+    <table class="table table-striped table-hover table-sm collapse" id="getup-attack" data-parent="#accordian"
+      aria-labelledby="getup-attack">
+      <tr class="text-center">
+        <th class="font-weight-bold">Move</th>
+        <th class="font-weight-bold">Input</th>
+        <th class="font-weight-bold">Type</th>
+        <th class="t-font-colour-red">damage</th>
+        <th class="t-font-colour-red">block dmg</th>
+        <th class="t-font-colour-red">flawless block dmg</th>
+        <th class="t-font-colour-green">Startup</th>
+        <th class="t-font-colour-green">Active</th>
+        <th class="t-font-colour-green">Recovery</th>
+        <th class="t-font-colour-blue">cancel adv</th>
+        <th class="t-font-colour-blue">hit adv</th>
+        <th class="t-font-colour-blue">block adv</th>
+        <th class="t-font-colour-blue">flawless block adv</th>
+        <th>info</th>
+        <th class="text-left" colspan="2">equip</th>
+      </tr>
+      {% for move in moves %}
+      {% if move.classification == "Getup Attack" %}
+      <tr class="text-center">
+        <td class="font-weight-bold">{{ move.move_name }}</td>
+        <td class="font-weight-bold">{{ move.move_input }}</td>
+        <td class="font-weight-bold">{{ move.move_type }}</td>
+        <td class="t-font-colour-red">{{ move.damage }}</td>
+        <td class="t-font-colour-red">{{ move.block_damage }}</td>
+        <td class="t-font-colour-red">{{ move.f_block_damage }}</td>
+        <td class="t-font-colour-green">{{ move.startup }}</td>
+        <td class="t-font-colour-green">{{ move.Active }}</td>
+        <td class="t-font-colour-green">{{ move.Recovery }}</td>
+        <td class="t-font-colour-blue">{{ move.cancel_adv }}</td>
+        <td class="t-font-colour-blue">{{ move.hit_adv }}</td>
+        <td class="t-font-colour-blue">{{ move.block_adv }}</td>
+        <td class="t-font-colour-blue">{{ move.f_block_adv }}</td>
+        <td>{{ move.info }}</td>
+        <td>{{ move.equip }}</td>
+        <td>
+          <form method="POST">
+            {% csrf_token %}
+            <button class="table-button" name="move_id" type="submit" value={{ move.id }}>add note</a>
+          </form>
+        </td>
+        {% endif %}
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading-roll-escape">
+      <button class="btn btn-link" data-toggle="collapse" data-target="#roll-escape" aria-expanded="false"
+        aria-controls="roll-escape">
+        Roll Escapes
+      </button>
+    </div>
+
+    <table class="table table-striped table-hover table-sm collapse" id="roll-escape" data-parent="#accordian"
+      aria-labelledby="roll-escape">
+      <tr class="text-center">
+        <th class="font-weight-bold">Move</th>
+        <th class="font-weight-bold">Input</th>
+        <th class="font-weight-bold">Type</th>
+        <th class="t-font-colour-red">damage</th>
+        <th class="t-font-colour-red">block dmg</th>
+        <th class="t-font-colour-red">flawless block dmg</th>
+        <th class="t-font-colour-green">Startup</th>
+        <th class="t-font-colour-green">Active</th>
+        <th class="t-font-colour-green">Recovery</th>
+        <th class="t-font-colour-blue">cancel adv</th>
+        <th class="t-font-colour-blue">hit adv</th>
+        <th class="t-font-colour-blue">block adv</th>
+        <th class="t-font-colour-blue">flawless block adv</th>
+        <th>info</th>
+        <th class="text-left" colspan="2">equip</th>
+      </tr>
+      {% for move in moves %}
+      {% if move.classification == "Roll Escape" %}
+      <tr class="text-center">
+        <td class="font-weight-bold">{{ move.move_name }}</td>
+        <td class="font-weight-bold">{{ move.move_input }}</td>
+        <td class="font-weight-bold">{{ move.move_type }}</td>
+        <td class="t-font-colour-red">{{ move.damage }}</td>
+        <td class="t-font-colour-red">{{ move.block_damage }}</td>
+        <td class="t-font-colour-red">{{ move.f_block_damage }}</td>
+        <td class="t-font-colour-green">{{ move.startup }}</td>
+        <td class="t-font-colour-green">{{ move.Active }}</td>
+        <td class="t-font-colour-green">{{ move.Recovery }}</td>
+        <td class="t-font-colour-blue">{{ move.cancel_adv }}</td>
+        <td class="t-font-colour-blue">{{ move.hit_adv }}</td>
+        <td class="t-font-colour-blue">{{ move.block_adv }}</td>
+        <td class="t-font-colour-blue">{{ move.f_block_adv }}</td>
+        <td>{{ move.info }}</td>
+        <td>{{ move.equip }}</td>
+        <td>
+          <form method="POST">
+            {% csrf_token %}
+            <button class="table-button" name="move_id" type="submit" value={{ move.id }}>add note</a>
+          </form>
+        </td>
+        {% endif %}
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading-air-escape">
+      <button class="btn btn-link" data-toggle="collapse" data-target="#air-escape" aria-expanded="false"
+        aria-controls="air-escape">
+        Air Escape
+      </button>
+    </div>
+
+    <table class="table table-striped table-hover table-sm collapse" id="air-escape" data-parent="#accordian"
+      aria-labelledby="air-escape">
+      <tr class="text-center">
+        <th class="font-weight-bold">Move</th>
+        <th class="font-weight-bold">Input</th>
+        <th class="font-weight-bold">Type</th>
+        <th class="t-font-colour-red">damage</th>
+        <th class="t-font-colour-red">block dmg</th>
+        <th class="t-font-colour-red">flawless block dmg</th>
+        <th class="t-font-colour-green">Startup</th>
+        <th class="t-font-colour-green">Active</th>
+        <th class="t-font-colour-green">Recovery</th>
+        <th class="t-font-colour-blue">cancel adv</th>
+        <th class="t-font-colour-blue">hit adv</th>
+        <th class="t-font-colour-blue">block adv</th>
+        <th class="t-font-colour-blue">flawless block adv</th>
+        <th>info</th>
+        <th class="text-left" colspan="2">equip</th>
+      </tr>
+      {% for move in moves %}
+      {% if move.classification == "Air Escape" %}
+      <tr class="text-center">
+        <td class="font-weight-bold">{{ move.move_name }}</td>
+        <td class="font-weight-bold">{{ move.move_input }}</td>
+        <td class="font-weight-bold">{{ move.move_type }}</td>
+        <td class="t-font-colour-red">{{ move.damage }}</td>
+        <td class="t-font-colour-red">{{ move.block_damage }}</td>
+        <td class="t-font-colour-red">{{ move.f_block_damage }}</td>
+        <td class="t-font-colour-green">{{ move.startup }}</td>
+        <td class="t-font-colour-green">{{ move.Active }}</td>
+        <td class="t-font-colour-green">{{ move.Recovery }}</td>
+        <td class="t-font-colour-blue">{{ move.cancel_adv }}</td>
+        <td class="t-font-colour-blue">{{ move.hit_adv }}</td>
+        <td class="t-font-colour-blue">{{ move.block_adv }}</td>
+        <td class="t-font-colour-blue">{{ move.f_block_adv }}</td>
+        <td>{{ move.info }}</td>
+        <td>{{ move.equip }}</td>
+        <td>
+          <form method="POST">
+            {% csrf_token %}
+            <button class="table-button" name="move_id" type="submit" value={{ move.id }}>add note</a>
+          </form>
+        </td>
+        {% endif %}
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading-fatal-blow">
+      <button class="btn btn-link" data-toggle="collapse" data-target="#fatal-blow" aria-expanded="false"
+        aria-controls="fatal-blow">
+        Fatal Blow
+      </button>
+    </div>
+
+    <table class="table table-striped table-hover table-sm collapse" id="fatal-blow" data-parent="#accordian"
+      aria-labelledby="fatal-blow">
+      <tr class="text-center">
+        <th class="font-weight-bold">Move</th>
+        <th class="font-weight-bold">Input</th>
+        <th class="font-weight-bold">Type</th>
+        <th class="t-font-colour-red">damage</th>
+        <th class="t-font-colour-red">block dmg</th>
+        <th class="t-font-colour-red">flawless block dmg</th>
+        <th class="t-font-colour-green">Startup</th>
+        <th class="t-font-colour-green">Active</th>
+        <th class="t-font-colour-green">Recovery</th>
+        <th class="t-font-colour-blue">cancel adv</th>
+        <th class="t-font-colour-blue">hit adv</th>
+        <th class="t-font-colour-blue">block adv</th>
+        <th class="t-font-colour-blue">flawless block adv</th>
+        <th>info</th>
+        <th class="text-left" colspan="2">equip</th>
+      </tr>
+      {% for move in moves %}
+      {% if move.classification == "Fatal Blow" %}
+      <tr class="text-center">
+        <td class="font-weight-bold">{{ move.move_name }}</td>
+        <td class="font-weight-bold">{{ move.move_input }}</td>
+        <td class="font-weight-bold">{{ move.move_type }}</td>
+        <td class="t-font-colour-red">{{ move.damage }}</td>
+        <td class="t-font-colour-red">{{ move.block_damage }}</td>
+        <td class="t-font-colour-red">{{ move.f_block_damage }}</td>
+        <td class="t-font-colour-green">{{ move.startup }}</td>
+        <td class="t-font-colour-green">{{ move.Active }}</td>
+        <td class="t-font-colour-green">{{ move.Recovery }}</td>
+        <td class="t-font-colour-blue">{{ move.cancel_adv }}</td>
+        <td class="t-font-colour-blue">{{ move.hit_adv }}</td>
+        <td class="t-font-colour-blue">{{ move.block_adv }}</td>
+        <td class="t-font-colour-blue">{{ move.f_block_adv }}</td>
+        <td>{{ move.info }}</td>
+        <td>{{ move.equip }}</td>
+        <td>
+          <form method="POST">
+            {% csrf_token %}
+            <button class="table-button" name="move_id" type="submit" value={{ move.id }}>add note</a>
+          </form>
+        </td>
+        {% endif %}
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="heading-fatality">
+      <button class="btn btn-link" data-toggle="collapse" data-target="#fatality" aria-expanded="false"
+        aria-controls="fatality">
+        Fatalities
+      </button>
+    </div>
+
+    <table class="table table-striped table-hover table-sm collapse" id="fatality" data-parent="#accordian"
+      aria-labelledby="fatality">
+      <tr class="text-center">
+        <th class="font-weight-bold">Move</th>
+        <th class="font-weight-bold">Input</th>
+        <th class="font-weight-bold">Type</th>
+        <th class="t-font-colour-red">damage</th>
+        <th class="t-font-colour-red">block dmg</th>
+        <th class="t-font-colour-red">flawless block dmg</th>
+        <th class="t-font-colour-green">Startup</th>
+        <th class="t-font-colour-green">Active</th>
+        <th class="t-font-colour-green">Recovery</th>
+        <th class="t-font-colour-blue">cancel adv</th>
+        <th class="t-font-colour-blue">hit adv</th>
+        <th class="t-font-colour-blue">block adv</th>
+        <th class="t-font-colour-blue">flawless block adv</th>
+        <th>info</th>
+        <th class="text-left" colspan="2">equip</th>
+      </tr>
+      {% for move in moves %}
+      {% if move.classification == "Fatality" %}
+      <tr class="text-center">
+        <td class="font-weight-bold">{{ move.move_name }}</td>
+        <td class="font-weight-bold">{{ move.move_input }}</td>
+        <td class="font-weight-bold">{{ move.move_type }}</td>
+        <td class="t-font-colour-red">{{ move.damage }}</td>
+        <td class="t-font-colour-red">{{ move.block_damage }}</td>
+        <td class="t-font-colour-red">{{ move.f_block_damage }}</td>
+        <td class="t-font-colour-green">{{ move.startup }}</td>
+        <td class="t-font-colour-green">{{ move.Active }}</td>
+        <td class="t-font-colour-green">{{ move.Recovery }}</td>
+        <td class="t-font-colour-blue">{{ move.cancel_adv }}</td>
+        <td class="t-font-colour-blue">{{ move.hit_adv }}</td>
+        <td class="t-font-colour-blue">{{ move.block_adv }}</td>
+        <td class="t-font-colour-blue">{{ move.f_block_adv }}</td>
+        <td>{{ move.info }}</td>
+        <td>{{ move.equip }}</td>
+        <td>
+          <form method="POST">
+            {% csrf_token %}
+            <button class="table-button" name="move_id" type="submit" value={{ move.id }}>add note</a>
+          </form>
+        </td>
+        {% endif %}
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
 
 {% endblock %}
 
-                <!-- <form method="get">
-                                    <a href="{%url 'notes' %}" name="move_id" value={{ move.id }}> add note </a>
-                                </form> -->
-                <!-- <form method="post">
-                    {{form.as_p}}
-                    <a href="{%url 'add_note' %}" name="move_id" value={{ move.id }}> add note </a> -->
+<!--
+    fatal blow
+    fatality
+
+ -->

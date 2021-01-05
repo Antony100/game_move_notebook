@@ -1,12 +1,11 @@
-from .forms import LoginForm, UserRegistrationForm
-from django.contrib.auth import authenticate, login
+from .forms import NoteForm, UserRegistrationForm
+from django.contrib.auth import authenticate, login, views
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views.generic import View, ListView, TemplateView, CreateView, FormView, DetailView, UpdateView, DeleteView
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
 from charviewer.models import Moves, Notes
-from .forms import LoginForm, NoteForm
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.urls import reverse
@@ -48,6 +47,17 @@ class CassieFrames(LoginRequiredMixin, ListView):
     template_name = 'charviewer/frames.html'
     queryset = Moves.objects.filter(character_id=2)
     context_object_name = 'moves'
+
+    def get_context_data(self, **kwargs):
+        context = super(CassieFrames, self).get_context_data(**kwargs)
+        context['moves'] = self.queryset
+        return context
+
+    def post(self, request, *args, **kwargs):
+        request.session['move'] = request.POST.get('move_id')
+        print(
+            f"the move taken from the frames page is: {request.session['move']}")
+        return HttpResponseRedirect(reverse('add_note'))
 
 
 class Notebook(LoginRequiredMixin, ListView):
