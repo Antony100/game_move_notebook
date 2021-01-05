@@ -62,6 +62,7 @@ class Notes(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     note = models.CharField(max_length=300)
     move_id = models.IntegerField()
+    # character_id = models.IntegerField(default=1)
 
     class Meta:
         def __str__(self):
