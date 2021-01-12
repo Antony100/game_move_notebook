@@ -69,16 +69,6 @@
             <td>{{note.note}}</td>
             <td><a name="note_id" href="/update_note/{{note.id}}"> Edit </a></td>
             <td><a name="note_id" href="/delete_note/{{note.id}}"> Delete </a></td>
-            <!-- <td><button name="move_id" type="submit"> Delete </a></td> -->
-            <!-- <td>
-
-                <form method="post">
-                    {{form.as_p}}
-                    <a href="{%url 'add_note' %}" name="move_id" value={{ move.id }}> add note </a>
-                </form>
-
-            </td> -->
-
         </tr>
         {% endif %}
         {% endfor %}
